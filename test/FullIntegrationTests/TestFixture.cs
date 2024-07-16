@@ -22,8 +22,8 @@ public class TestFixture : IAsyncLifetime
         _playwright = await Playwright.CreateAsync();
         _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
-            Headless = false,
-            SlowMo = 2000
+            // Headless = false,
+            // SlowMo = 2000
         });
         _context = await _browser.NewContextAsync(new BrowserNewContextOptions()
         {   
